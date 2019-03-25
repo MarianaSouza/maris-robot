@@ -72,18 +72,35 @@ h1 {
 } 
 
 .left_arm { 
-	margin-right: 10px; 
-} 
+	margin-right: 10px;
+	transition: transform 1s;
+    transform-origin: right top; 
+}
+
+.left_arm:hover{
+	transform: rotate(160deg);
+}
 
 .right_arm { 
-	margin-left: 10px; 
-} 
+	margin-left: 10px;
+	transition: transform 1s;
+    transform-origin: left top; 
+}
+
+.right_arm:hover{
+	transform: rotate(-160deg);
+}
 
 .torso { 
 	width: 200px; 
 	height: 200px;
-	border-radius: 0 0 50px 50px; 
+	border-radius: 0 0 50px 50px;
+	transition: transform 1s;
 } 
+
+.torso:hover{
+	transform: skewX(-10deg);
+}
 
 .lower_body { 
 	width: 200px; 
