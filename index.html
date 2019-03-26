@@ -26,5 +26,58 @@
 			</div> 
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$(".head").hover(function(){
+				$("body").addClass("head-active");
+			});
+
+			$(".head").mouseleave(function(){
+				$("body").removeClass("head-active");
+			});
+
+			$(".left_arm").hover(function(){
+				$("body").addClass("left_arm-active");
+			});
+
+			$(".left_arm").mouseleave(function(){
+				$("body").removeClass("left_arm-active");
+			});
+
+			$(".right_arm").hover(function(){
+				$("body").addClass("right_arm-active");
+			});
+
+			$(".right_arm").mouseleave(function(){
+				$("body").removeClass("right_arm-active");
+			});
+
+			$(".torso").hover(function(){
+				$("body").addClass("torso-active");
+			});
+
+			$(".torso").mouseleave(function(){
+				$("body").removeClass("torso-active");
+			});
+
+			$(".left_leg").hover(function(){
+				$("body").addClass("left_leg-active");
+			});
+
+			$(".left_leg").mouseleave(function(){
+				$("body").removeClass("left_leg-active");
+			});
+
+			$(".right_leg").hover(function(){
+				$("body").addClass("right_leg-active");
+			});
+
+			$(".right_leg").mouseleave(function(){
+				$("body").removeClass("right_leg-active");
+			});
+		})
+	</script>
 </body>
 </html>
