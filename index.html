@@ -1,83 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Mari's Robot</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
+
 <body>
 	<h1>Mari's Robot</h1>
 	<div class="robots">
-		<div class="android"> 
-			<div class="head"> 
-				<div class="eyes"> 
-					<div class="left_eye"></div> 
+		<div class="android">
+			<div class="head">
+				<div class="eyes">
+					<div class="left_eye"></div>
 					<div class="right_eye"></div>
-				</div> 
-			</div> 
-			<div class="upper_body"> 
-				<div class="left_arm"></div> 
-				<div class="torso"></div> 
-				<div class="right_arm"></div> 
-			</div> 
-			<div class="lower_body"> 
-				<div class="left_leg"></div> 
-				<div class="right_leg"></div> 
-			</div> 
+				</div>
+			</div>
+			<div class="upper_body">
+				<div class="left_arm"></div>
+				<div class="torso"></div>
+				<div class="right_arm"></div>
+			</div>
+			<div class="lower_body">
+				<div class="left_leg"></div>
+				<div class="right_leg"></div>
+			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
+		$(document).ready(function() {
+			function addEffect(selector, selectorActive) {
+				$(selector).hover(function () {
+					$("body").addClass(selectorActive);
+				});
+			}
+			function removeEffect(selector, selectorActive) {
+				$(selector).mouseleave(function () {
+					$("body").removeClass(selectorActive);
+				});
+			}
+			addEffect(".head", "head-active");
+			removeEffect(".head", "head-active");
+			addEffect(".left_arm", "left_arm-active");
+			removeEffect(".left_arm", "left_arm-active");
+			addEffect(".right_arm", "right_arm-active");
+			removeEffect(".right_arm", "right_arm-active");
+			addEffect(".torso", "torso-active");
+			removeEffect(".torso", "torso-active");
+			addEffect(".left_leg", "left_leg-active");
+			removeEffect(".left_leg", "left_leg-active");
+			addEffect(".right_leg", "right_leg-active");
+			removeEffect(".right_leg", "right_leg-active");
 
-		$(document).ready(function(){
-			$(".head").hover(function(){
-				$("body").addClass("head-active");
 			});
-
-			$(".head").mouseleave(function(){
-				$("body").removeClass("head-active");
-			});
-
-			$(".left_arm").hover(function(){
-				$("body").addClass("left_arm-active");
-			});
-
-			$(".left_arm").mouseleave(function(){
-				$("body").removeClass("left_arm-active");
-			});
-
-			$(".right_arm").hover(function(){
-				$("body").addClass("right_arm-active");
-			});
-
-			$(".right_arm").mouseleave(function(){
-				$("body").removeClass("right_arm-active");
-			});
-
-			$(".torso").hover(function(){
-				$("body").addClass("torso-active");
-			});
-
-			$(".torso").mouseleave(function(){
-				$("body").removeClass("torso-active");
-			});
-
-			$(".left_leg").hover(function(){
-				$("body").addClass("left_leg-active");
-			});
-
-			$(".left_leg").mouseleave(function(){
-				$("body").removeClass("left_leg-active");
-			});
-
-			$(".right_leg").hover(function(){
-				$("body").addClass("right_leg-active");
-			});
-
-			$(".right_leg").mouseleave(function(){
-				$("body").removeClass("right_leg-active");
-			});
-		})
 	</script>
 </body>
 </html>
